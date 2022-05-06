@@ -4,6 +4,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Scanner;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -107,14 +108,11 @@ public class Fixcoment {
     }
 
     public static void main(String[] args) throws IOException {
-
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("insert the path: ");
+        String path = scanner.nextLine();
         String[] extensions = {"c", "h"};
-        List<String> files = findFiles(Paths.get("C:/Users/RosamisSosa/OneDrive - Quside/Documents/repoAzure/QusideQRNGLibrary"), extensions);
-
-        // C:/Users/RosamisSosa/OneDrive - Quside/Documents/old/QusideQRNGLibrary
-        /*C:/Users/rsosa/git/QusideQRNGLibrary*/
-
-        // files.forEach(x -> System.out.println(x));
+        List<String> files = findFiles(Paths.get(path), extensions);
 
         for (String str: files){
             System.out.println(str);
