@@ -109,7 +109,7 @@ public class Fixcoment {
 
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("insert the path: ");
+        System.out.println("Insert the path: ");
         String path = scanner.nextLine();
         String[] extensions = {"c", "h"};
         List<String> files = findFiles(Paths.get(path), extensions);
