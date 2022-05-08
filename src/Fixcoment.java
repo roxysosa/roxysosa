@@ -108,9 +108,13 @@ public class Fixcoment {
     }
 
     public static void main(String[] args) throws IOException {
+        String dir = System.getProperty("user.dir");
+        System.out.println(dir);
         Scanner scanner = new Scanner(System.in);
         System.out.println("Insert the path: ");
         String path = scanner.nextLine();
+
+
         String[] extensions = {"c", "h"};
         List<String> files = findFiles(Paths.get(path), extensions);
 
